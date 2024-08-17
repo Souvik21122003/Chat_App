@@ -23,7 +23,7 @@ function Chat() {
   }, []);
 
   const connectWS = function () {
-    const ws = new WebSocket('ws://localhost:4000');
+    const ws = new WebSocket('wss://chat-app-backend-z3xr.onrender.com');
     setWs(ws);
      ws.addEventListener('open', () => {
       console.log('WebSocket connection established');
@@ -118,16 +118,10 @@ function Chat() {
       
       if (ws)
        ws.close()
-      const newOnline = online.filter(c => (c.id !== id)&&c.id)
-      setOnline(newOnline)
-
-      console.log(online);
       
-
       setWs(null)
         setId('')
       setContusername('')
-     
       
     }
 

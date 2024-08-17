@@ -1,7 +1,7 @@
 import axios from "axios";
 const my_axios = axios.create({
-    baseURL: ' http://localhost:4000/api/v1/user',
-    withCredentials: true
-})
+  baseURL: " https://chat-app-backend-z3xr.onrender.com/api/v1/user",
+  withCredentials: true,
+});
 
-export {my_axios}
+export { my_axios };
